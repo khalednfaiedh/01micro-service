@@ -1,0 +1,38 @@
+spring.application.name : micro01
+server.port: 9001
+ ## DB config
+  
+    
+spring:
+  
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      
+        temp:
+          use_jdbc_metadata_defaults: false
+        format_sql: true
+        generate_statistics: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    open-in-view: true
+  datasource:
+    driver-class-name: org.postgresql.Driver 
+    url: jdbc:postgresql://localhost:5432/micro01
+    username: postgres
+    password: 14042018AK       
+    servlet:
+    multipart:
+      max-file-size: 200 MB
+      max-request-size: 200 MB
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  main:
+    allow-bean-definition-overriding: true
+    
+    
+    
